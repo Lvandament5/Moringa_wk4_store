@@ -289,6 +289,7 @@ ul{
 .menu-icon{
     width:28px;
     margin-left: 20px;
+<<<<<<< HEAD
     display:none;
 }
 
@@ -376,6 +377,9 @@ input:focus{
     flex-basis:24%;
     cursor: pointer;
 
+=======
+    display: none;
+>>>>>>> Adding media queries and menu toggle
 }
 
 /*----media query menu-----*/
@@ -386,7 +390,11 @@ input:focus{
         left: 0;
         background: #333;
         width: 100%;
+<<<<<<< HEAD
         overflow: hidden;
+=======
+        overflow:hidden;
+>>>>>>> Adding media queries and menu toggle
         transition: max-height 0.5s;
         }
     nav ul li{

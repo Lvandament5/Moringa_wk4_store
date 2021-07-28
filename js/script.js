@@ -18,6 +18,7 @@ function menutoggle(){
     }
 }
 
+<<<<<<< HEAD
 function address() {
     var x = document.getElementById("myDIV");
     if (x.style.display === "none") {
@@ -26,3 +27,5 @@ function address() {
       x.style.display = "none";
     }
   }
+=======
+>>>>>>> Adding media queries and menu toggle
