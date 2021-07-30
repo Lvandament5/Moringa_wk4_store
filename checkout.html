@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poppys | All products</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="stylesheet" href="assets/css/stylecart.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" alt="" width="30px" height="30px">
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+
+        </div>
+    </div>
+
+    <!-----cart checkout----->
+    <div class="cd-cart__content">
+        <div class="cd-cart__layout">
+            <header class="cd-cart__header">
+                <h2>Cart</h2>
+                <span class="cd-cart__undo">Item removed. <a href="#0">Undo</a></span>
+            </header>
+
+            <div class="cd-cart__body">
+                <ul>
+                    <!-- products added to the cart will be inserted here using JavaScript -->
+                </ul>
+            </div>
+
+            <!-- <footer class="cd-cart__footer"> -->
+                <!-- <a href="checkout.html" class="cd-cart__checkout">
+                    <em>Checkout - $<span>0</span>
+                        <svg class="icon icon--sm" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor">
+                                <line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="3" y1="12"
+                                    x2="21" y2="12" />
+                                <polyline stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    points="15,6 21,12 15,18 " />
+                            </g>
+                        </svg>
+                    </em>
+                </a> -->
+            <!-- </footer> -->
+        </div>
+    </div>
+    <!----footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>download our app</h3>
+                    <p>info about app</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>new text here</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog</li>
+                        <li>Suggestions</li>
+                        <li>Follow us</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2020 Tutorial</p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="assets/js/main.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="assets/js/util.js"></script>
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+	// ]]>
+    </script>
+
+</body>
+
+</html>
